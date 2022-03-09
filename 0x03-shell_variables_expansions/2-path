@@ -1,0 +1,2 @@
+#!/bin/bash
+export PATH=/data/data/com.termux/files/usr/bin:/action:/action

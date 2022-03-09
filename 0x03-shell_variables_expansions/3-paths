@@ -1,0 +1,2 @@
+#!/bin/bash
+echo /data/data/com.termux/files/usr/bin:/action | tr -s ':''\n' | wc -l
