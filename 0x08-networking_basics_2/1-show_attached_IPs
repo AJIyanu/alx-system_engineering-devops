@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This bash scripts shows all ipv4
+
+hostname -I
