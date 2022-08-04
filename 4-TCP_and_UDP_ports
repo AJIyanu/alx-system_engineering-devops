@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#This script prints all listening networks internet and servers
-
-sudo netstat -ltup
-sudo netstat -lxp
