@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#print all process ids in my format
+#print all process ids in my formag
 
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,started,time,command
+ps -auxf
