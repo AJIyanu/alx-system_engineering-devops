@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#print all process ids in my format
+
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
