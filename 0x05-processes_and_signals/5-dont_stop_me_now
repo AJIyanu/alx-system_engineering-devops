@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #stop the damn shit
 
-pkill "infinity_and_beyond"
+pkill "beyond"
