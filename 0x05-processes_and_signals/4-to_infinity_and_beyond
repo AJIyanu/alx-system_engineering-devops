@@ -5,4 +5,5 @@ while :
 do
 	echo "To infinity and beyond";
 	sleep 2
+	ps -aux
 done
