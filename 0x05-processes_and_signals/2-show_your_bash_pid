@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#to show bash id using grep
+# shellcheck disable=SC20
+
+ps -auxf | grep "bash"
