@@ -1,8 +1,8 @@
-# usimg the ezecute command. pkill
+# Kills a process name killmenow
 
-exec { 'pkill':
-      path     => '/bin/',
-      commandm => 'pkill killmenow'
-      provider => shell,
-      return   => [0, 1],
+exec { 'pkill killmenow':
+  path     => '/usr/bin',
+  command  => 'pkill killmenow',
+  provider => shell,
+  returns  => [0, 1]
 }
