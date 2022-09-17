@@ -1,5 +1,8 @@
 # usimg the ezecute command. pkill
 
 exec { 'pkill':
-      command => ['/bin/pkill', 'killmenow']
+      path     => '/bin/',
+      commandm => 'pkill killmenow'
+      provider => shell,
+      return   => [0, 1],
 }
