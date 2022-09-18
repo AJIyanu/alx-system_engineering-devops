@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+# Thia guy needed a comment so i gave him one
+
 ssh -i ~/.ssh/school ubuntu@44.192.72.216
