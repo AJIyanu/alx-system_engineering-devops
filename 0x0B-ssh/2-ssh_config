@@ -1,1 +1,8 @@
-#!/usr/bin/env bas
+#!/usr/bin/env bash
+# wanna config my client
+
+Host
+    HostName 44.192.72.216
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
