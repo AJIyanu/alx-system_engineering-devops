@@ -1,2 +1,9 @@
-#!/usr/bin/env bas
-# This is a comment
+#!/usr/bin/env bash
+# installs Nginx web server
+# configure root to echo hello world
+# first webpage
+
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
+service nginx start
