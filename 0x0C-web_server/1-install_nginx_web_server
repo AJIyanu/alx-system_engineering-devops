@@ -3,7 +3,7 @@
 # configure root to echo hello world
 # first webpage
 
-apt-get -y update
-apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.html
-service nginx start
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo echo "Hello World!" > /var/www/html/index.html
+sudo service nginx start
