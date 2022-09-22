@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # The server needs to be started
 
-sudo service apache2 start
+sudo service nginx start
