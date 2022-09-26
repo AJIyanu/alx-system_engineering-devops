@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# installs Nginx web server
-# configure root to echo hello world
-# first webpage
-# Configure your Nginx server so that /redirect_me is redirecting to another page
+# Configure a new Nginx server so that /redirect_me is redirecting to another page
+#+ The redirection must be a “301 Moved Permanently”
 
-apt-get -y update
-apt-get -y install nginx
-echo "Hello World" > /var/www/html/index.nginx-debian.html
-sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/AJIyanu permanent;/" /etc/nginx/sites-available/default
-service nginx start
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo service nginx start
+newlines="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "26i $newlines" /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo service nginx reload
