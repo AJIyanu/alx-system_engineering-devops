@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# install and comfigure a load balnacer
+# with haproxy and roundrobin config
+
+sudo apt update
+sudo apt upgrade
+sudo apt-get install -y haproxy
+sudo sed '$ a frontend myfrontend'
+sudo sed '$ a \\\tbind 127.0.0.1:80'
+  default_backend myservers
+
+backend myservers
+  server server1 127.0.0.1:8000
