@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-sed -a 'frontend myfrontend' txt.txt
-sed -a '\\\tbind 127.0.0.1:80' txt.txt
-sed -a '\\\tdefault_backend myservers\n' txt.txt
+echo -e  "frontend myfrontend' txt.txt
+\tbind 127.0.0.1:80' txt.txt
+\tdefault_backend myservers
 
-sed -a 'backend myservers' txt.txt
-sed -a '\\\tserver server1 127.0.0.1:8000' txt.txt
+backend myservers
+\tserver server1 127.0.0.1:8000" | tee -a txt.txt

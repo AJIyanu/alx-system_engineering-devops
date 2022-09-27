@@ -1,1 +1,12 @@
 server
+frontend myfrontend' txt.txt
+	bind 127.0.0.1:80' txt.txt
+
+	default_backend myservers
+
+frontend myfrontend' txt.txt
+	bind 127.0.0.1:80' txt.txt
+	default_backend myservers
+
+backend myservers
+	server server1 127.0.0.1:8000

@@ -5,9 +5,11 @@
 sudo apt update
 sudo apt upgrade
 sudo apt-get install -y haproxy
-sudo sed '$ a frontend myfrontend'
-sudo sed '$ a \\\tbind 127.0.0.1:80'
-  default_backend myservers
+echo -e "frontend myfrontend
+\tbind 0.0.0.0:80
+\tdefault_backend myservers
 
-backend myservers
-  server server1 127.0.0.1:8000
+backend myserver
+\tbalance roundrobin
+\tserver 11102-web-01 44.192.72.216:80
+\tserver 11102-web-02 44.192.52.223:80" | sudo tee -a /etc/haproxy/haproxy.cfg
