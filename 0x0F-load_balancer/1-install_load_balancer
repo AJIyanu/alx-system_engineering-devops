@@ -2,8 +2,8 @@
 # install and comfigure a load balnacer
 # with haproxy and roundrobin config
 
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt-get install -y haproxy
 echo -e "frontend myfrontend
 \tbind 0.0.0.0:80
