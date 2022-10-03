@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Install Nginx with server 0x01 config
-#+ add HTTP header named X-Served-By $HOSTNAME
+# configure a brand new server with nginx with redirection
+# error page and X-Served by server name
 
 apt-get update
 apt-get install -y nginx
