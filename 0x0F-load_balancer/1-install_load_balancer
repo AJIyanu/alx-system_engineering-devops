@@ -4,7 +4,8 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt-get install -y haproxy
+apt-get -y install haproxy=1.6.\*
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 echo -e "frontend myfrontend
 \tbind 0.0.0.0:80
 \tdefault_backend myservers
