@@ -9,7 +9,8 @@ echo -e "frontend myfrontend
 \tbind 0.0.0.0:80
 \tdefault_backend myservers
 
-backend myserver
+backend myservers
 \tbalance roundrobin
-\tserver 11102-web-01 44.192.72.216:80
-\tserver 11102-web-02 44.192.52.223:80" | sudo tee -a /etc/haproxy/haproxy.cfg
+\tserver 11102-web-01 44.192.72.216:80 check
+\tserver 11102-web-02 44.192.52.223:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy start
