@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # The server needs to be started
 
-/etc/init.d/apache2 start
+sudo /etc/init.d/apache2 start
