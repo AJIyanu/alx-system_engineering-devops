@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Documenting this in a second"""
 
 import json
 import requests as r
