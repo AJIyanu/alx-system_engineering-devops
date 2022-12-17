@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # The server needs to be started
 
-echo 'Hello Holberton' > /var/www/html/index.html
+echo 'Hello Holberton' | sudo tee /var/www/html/index.html
 sudo service apache2 start
