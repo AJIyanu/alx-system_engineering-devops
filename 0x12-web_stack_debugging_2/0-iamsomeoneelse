@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # run command as me else
 
-sudo -u $1 whoami
+sudo -u "$1" whoami
