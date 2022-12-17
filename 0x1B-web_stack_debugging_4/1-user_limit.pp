@@ -1,11 +1,11 @@
-# change the limit ofopen files in nginx config
-exec {'change limit':
-  command  => "sudo sed -i 's/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/g' /etc/default/nginx",
+# change the limit of open files in os
+exec {'change limit soft':
+  command  => "sudo sed -i 's/holberton soft nofile 4/holberton soft nofile 88888/g'  /etc/security/limits.conf",
   provider => shell
 }
 
-# restart service
-exec {'restart service':
-  command  => 'sudo service nginx restart',
+# change the limit of open files in  os
+exec {'change limit hard':
+  command  => "sudo sed -i 's/holberton hard nofile 5/holberton hard nofile 88888/g'  /etc/security/limits.conf",
   provider => shell
 }
