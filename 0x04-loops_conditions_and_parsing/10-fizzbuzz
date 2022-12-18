@@ -15,5 +15,5 @@ then
 else
     echo $conter
 fi
-    let conter=conter+1
+    (( conter=conter+1 ))
 done
