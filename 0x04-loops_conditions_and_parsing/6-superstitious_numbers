@@ -18,5 +18,5 @@ while [ "$Counter" -le 20 ];
     echo "bad luck from Italy"
     ;;
     esac
-    let Counter=Counter+1
+    (( Counter=Counter+1 ))
 done
