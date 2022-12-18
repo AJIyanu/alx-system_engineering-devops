@@ -6,8 +6,8 @@ while [ $h -le 12 ]; do
       echo "Hour: $h"
       while [ $m -le 59 ] ; do
       	    echo "$m"
-	    	 let "m++"
+	    	 (( m++ ))
 		 done
 		 m=1
-		 let "h++"
+		 (( h++ )) || true
 done
