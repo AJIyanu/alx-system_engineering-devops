@@ -5,12 +5,12 @@
  total subscribers) for a given subreddit.
  If an invalid subreddit is given, the function should return 0.
  """
-import collections.abc
 import json
 
 try:
     import requests
 except ImportError:
+    import collections.abc
     collections.Mapping = collections.abc.Mapping
     collections.MutableMapping = collections.abc.MutableMapping
     collections.Iterable = collections.abc.Iterable
