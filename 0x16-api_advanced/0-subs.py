@@ -5,7 +5,10 @@
  total subscribers) for a given subreddit.
  If an invalid subreddit is given, the function should return 0.
  """
-import requests
+try:
+    import requests
+except Exception:
+    pass
 import json
 
 
