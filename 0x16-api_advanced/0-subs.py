@@ -6,6 +6,7 @@
  If an invalid subreddit is given, the function should return 0.
  """
 import collections.abc
+import json
 
 try:
     import requests
@@ -16,7 +17,6 @@ except ImportError:
     collections.MutableSet = collections.abc.MutableSet
     collections.Callable = collections.abc.Callable
     import requests
-import json
 
 
 def number_of_subscribers(subreddit):
