@@ -20,7 +20,7 @@ def search_word(sentence, word):
 def count_words(subreddit, wordlist, word_count={}):
     """returns a sorted list of a """
     if len(word_count) == 0:
-        word_count = {word: 0 for word in wordlist}
+        word_count = {word.lower(): 0 for word in wordlist}
     headers = {"User-Agent": "AJ Iyanu"}
     url = "http://www.reddit.com/r/{}/hot.json".format(subreddit)
     if "p2a4ra8m3s" not in word_count:
@@ -31,7 +31,6 @@ def count_words(subreddit, wordlist, word_count={}):
     titles = response.json()
     if titles.get("data").get("dist") == 0:
         return
-    print(word_count)
     for title in titles['data']['children']:
         for word in word_count:
             if word == "p2a4ra8m3s":
@@ -41,8 +40,8 @@ def count_words(subreddit, wordlist, word_count={}):
     if titles['data']['after'] is None:
         del word_count["p2a4ra8m3s"]
         alpha = sorted(word_count.items())
-        count = dict(sorted(alpha, key=lambda x:x[1], reverse=True))
-        print(count)
+        count = sorted(alpha, key=lambda x:x[1], reverse=True)
+        for key, value in count:
+            print("{}: {}".format(key, value))
         return
-    print(word_count)
     count_words(subreddit, wordlist, word_count)
