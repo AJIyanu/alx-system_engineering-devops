@@ -5,16 +5,7 @@
  total subscribers) for a given subreddit.
  If an invalid subreddit is given, the function should return 0.
  """
-try:
-    import requests
-except ImportError:
-    import collections.abc
-    collections.Mapping = collections.abc.Mapping
-    collections.MutableMapping = collections.abc.MutableMapping
-    collections.Iterable = collections.abc.Iterable
-    collections.MutableSet = collections.abc.MutableSet
-    collections.Callable = collections.abc.Callable
-    import requests
+import requests
 
 
 def number_of_subscribers(subreddit):
