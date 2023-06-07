@@ -12,7 +12,7 @@ def top_ten(subreddit):
     headers = {"User-Agent": "AJ Iyanu"}
     url = "http://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"limit": 10}
-    response = requests.get(url, headers=headers, params=params, allow_redirects=True)
+    response = requests.get(url, headers=headers, params=params)
     title = response.json()
     if title.get("data").get("dist") == 0:
         print("None")
