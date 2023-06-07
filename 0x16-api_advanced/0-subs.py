@@ -23,8 +23,8 @@ def number_of_subscribers(subreddit):
     if subreddit not valid returns 0
     """
     headers = {"User-Agent": "AJ Iyanu"}
-    url = f"http://www.reddit.com/r/{subreddit}/about.json"
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    url = "http://www.reddit.com/r/{}/about.json".format(subreddit)
+    response = requests.get(url, headers=headers, allow_redirects=True)
     if response.status_code != 200:
         return 0
     users = response.json()
