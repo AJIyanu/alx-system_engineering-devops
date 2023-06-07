@@ -22,11 +22,12 @@ def recurse(subreddit, hot_list=[0]):
     if title.get("data").get("dist") == 0:
         return
     hot_list[0] = title["data"]["after"]
+    count = 0
+    for data in title["data"]["children"]:
+        hot_list.append(data["data"]["title"])
+        count += 1
+    print(count)
     if hot_list[0] is None:
-        for data in title["data"]["children"]:
-            hot_list.append(data["data"]["title"])
+        hot_list.pop(0)
         return hot_list
-    else:
-        for data in title["data"]["children"]:
-            hot_list.append(data["data"]["title"])
     return recurse(subreddit, hot_list)

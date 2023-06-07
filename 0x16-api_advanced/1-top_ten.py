@@ -17,6 +17,5 @@ def top_ten(subreddit):
     if title.get("data").get("dist") == 0:
         print("None")
         return
-    count = 1
     for data in title["data"]["children"]:
         print(data["data"]["title"])
