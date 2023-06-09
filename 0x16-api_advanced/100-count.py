@@ -40,7 +40,7 @@ def count_words(subreddit, wordlist, word_count={}):
     if titles['data']['after'] is None:
         del word_count["p2a4ra8m3s"]
         alpha = sorted(word_count.items())
-        count = sorted(alpha, key=lambda x:x[1], reverse=True)
+        count = sorted(alpha, key=lambda x: x[1], reverse=True)
         for key, value in count:
             if value != 0:
                 print("{}: {}".format(key, value))
