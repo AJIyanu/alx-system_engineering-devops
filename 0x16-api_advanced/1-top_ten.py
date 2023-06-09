@@ -14,6 +14,8 @@ def top_ten(subreddit):
     params = {"limit": 10}
     response = requests.get(url, headers=headers, params=params)
     title = response.json()
+    if "error" in title:
+        return
     if title.get("data").get("dist") == 0:
         print("None")
         return

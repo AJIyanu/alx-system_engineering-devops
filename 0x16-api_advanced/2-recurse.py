@@ -19,7 +19,6 @@ def recurse(subreddit, hot_list=[0]):
     else:
         response = requests.get(url, headers=headers)
     title = response.json()
-    print(title)
     if "error" in title:
         return
     if title.get("data").get("dist") == 0:
