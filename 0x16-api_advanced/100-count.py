@@ -29,7 +29,7 @@ def count_words(subreddit, wordlist, word_count={}):
         params = {"after": word_count.get("p2a4ra8m3s")}
         response = requests.get(url, headers=headers, params=params)
     titles = response.json()
-    if titles.get("data").get("dist") == 0:
+    if "error" in titles:
         return
     for title in titles['data']['children']:
         for word in word_count:
@@ -42,6 +42,7 @@ def count_words(subreddit, wordlist, word_count={}):
         alpha = sorted(word_count.items())
         count = sorted(alpha, key=lambda x:x[1], reverse=True)
         for key, value in count:
-            print("{}: {}".format(key, value))
+            if value != 0:
+                print("{}: {}".format(key, value))
         return
     count_words(subreddit, wordlist, word_count)
