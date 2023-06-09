@@ -19,6 +19,7 @@ def recurse(subreddit, hot_list=[0]):
     else:
         response = requests.get(url, headers=headers)
     title = response.json()
+    print(title)
     if title.get("data").get("dist") == 0:
         return
     hot_list[0] = title["data"]["after"]
