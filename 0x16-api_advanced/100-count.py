@@ -32,7 +32,7 @@ def count_words(subreddit, wordlist, word_count={}):
         response = requests.get(url, headers=headers, params=params)
     titles = response.json()
     if "error" in titles:
-        print("returning")
+        print("returning", titles)
         return
     for title in titles['data']['children']:
         for word in word_count:
