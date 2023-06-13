@@ -11,7 +11,7 @@ import requests
 
 def search_word(sentence, word):
     """returns the numbers of time a word ocur"""
-    sentence = sentence.split()
+    sentence = sentence.lower().split()
     count = 0
     for split in sentence:
         if word is split:
