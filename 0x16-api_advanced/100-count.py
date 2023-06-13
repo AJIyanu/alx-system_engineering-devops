@@ -6,15 +6,17 @@ keywords (case-insensitive, delimited by spaces.
 Javascript should count as javascript,
 but java should not).
 """
-import re
 import requests
 
 
 def search_word(sentence, word):
     """returns the numbers of time a word ocur"""
-    pattern = r'\b{}\b'.format(re.escape(word.lower()))
-    match = re.findall(pattern, sentence.lower(), flags=re.IGNORECASE)
-    return len(match)
+    sentence = sentence.split()
+    count = 0
+    for split in sentence:
+        if word is split:
+            count += 1
+    return count
 
 
 def count_words(subreddit, wordlist, word_count={}):
