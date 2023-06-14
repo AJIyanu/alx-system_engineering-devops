@@ -23,7 +23,7 @@ def count_words(subreddit, wordlist, word_count={}):
     """returns a sorted list of a """
     if len(word_count) == 0:
         word_count = {word.lower(): 0 for word in wordlist}
-    headers = {"User-Agent": "AJ Iyanu"}
+    headers = {"User-Agent": "alx"}
     url = "http://www.reddit.com/r/{}/hot.json".format(subreddit)
     if "p2a4ra8m3s" not in word_count:
         response = requests.get(url, headers=headers)
