@@ -1,0 +1,16 @@
+[Unit]
+Description=AirBnb Gunicorn App
+After=network.target
+
+[Service]
+User=ubuntu
+
+WorkingDirectory=~/AirBnB_clone_v3/
+ExecStart=gunicorn --bind 0.0.0.0:5002 api.v1.app:app
+
+StandardError=syslog
+StandardOutput=syslog
+SyslogIdentifier=my-gunicorn-app
+
+[Install]
+WantedBy=default.target
