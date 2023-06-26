@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=ubuntu
 
-WorkingDirectory=~/AirBnB_clone_v4/
+WorkingDirectory=/home/ubuntu/AirBnB_clone_v4/
 ExecStart=gunicorn --bind 0.0.0.0:5003 web_dynamic.2-hbnb:app
 
 StandardError=syslog
